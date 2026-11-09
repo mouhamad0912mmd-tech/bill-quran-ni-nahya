@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+ <head> 
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>قائمة المهام</title>  
+<style> 
+body {font-family: Arial, sans-serif;
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 0 20px;}
+h1 {text-align: center;}
+input {padding: 10px;
+  font-size: 16px;
+  width: 65%;}
+  button {background-color:#2c3e50;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;}
+ul  {list-style: none;
+  padding: 0;}
+li {display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f0f0f0;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 8px;}
+</style>
+ </head>
+ <body>
+ <h1>قائمة المهام </h1>
+<input type="text" id="taskInput" placeholder="اكتب مهمتك هنا">
+<button id="addBtn">إضافة</button> 
+<ul id="taskList"></ul>
+<script>
+const taskInput = document.getElementById("taskInput");
+const addBtn = document.getElementById("addBtn");
+const taskList =document.getElementById("taskList");
+function addTask() {const text = taskInput.value;
+  if (text === "") {return}
+const li = document.createElement("li");
+li.textContent = text;
+const deleteBtn = document.createElement("button");
+deleteBtn.textContent = "x";
+deleteBtn.addEventListener("click", function () {li.remove(); }); 
+li.appendChild(deleteBtn);
+taskList.appendChild(li); 
+taskInput.value = "";
+ };
+
+ addBtn.addEventListener("click",addTask);
+taskInput.addEventListener("keydown", function(event) {
+if(event.key === "Enter")
+ {addTask();}
+});
+</script>
+
+
+ </body> 
+</html>
