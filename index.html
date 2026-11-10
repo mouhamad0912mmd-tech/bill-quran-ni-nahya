@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>موقع بالقرءان نحيا</title>
 <style>
+html { scroll-behavior: smooth;}
 nav {
   display: flex;
   justify-content: space-between;
@@ -59,6 +60,7 @@ img {
   border-radius: 10px;
   text-align: right;
 }
+.card a {color: #7fd1ff;}
 .card p {
   font-size: 18px;
   line-height: 1.8;
@@ -83,13 +85,13 @@ img {
 <nav>
   <span>بالقرءان نحيا</span>
   <div class="links">
-    <a href="#">الرئيسية</a>
-    <a href="#">أعمالي</a>
-    <a href="#">تواصل معي</a>
+    <a href="#home">الرئيسية</a>
+    <a href="#projects">أعمالي</a>
+    <a href="#contact">تواصل معي</a>
   </div>
 </nav>
 
-<h1>بالقرءان نحيا</h1>
+<h1 id="home">بالقرءان نحيا</h1>
 <p>هذا موقع القرءان والتفسير</p>
 <button id="colorbtn">غيّر اللون</button>
 <div class="grid">
@@ -126,6 +128,15 @@ img {
   <li><a href="https://quran.com" target="_blank">القرآن الكريم</a></li>
 </ul>
 <img src="image_4dd15b9c.jpg" alt="مصحف مفتوح على طاولة خشبية">
+<h2 id="projects">أعمالي</h2>
+<div class="grid">
+  <div class="card">
+<h3>قائمةالمهام</h3>
+<p> تطبيق صغير لإضافة المهام وحذفها،مبني ب HTML وCSS  وjavaScript. </p>
+<a href="todo.html">افتح المشروع</a>
+  </div>
+</div>
+<h2 id="contact">تواصل معي</h2>
 <script>
   let isPink = false;
   const colorbtn = document.getElementById("colorbtn");
