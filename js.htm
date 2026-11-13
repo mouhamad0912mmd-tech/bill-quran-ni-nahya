@@ -39,6 +39,16 @@ isyellow = false
   }
 });
 </script>
-
+<script>
+const searchInput = doucument.getElementByIdr("searchInput");
+const lessons = document.querySelectorAll(".lessons");
+searchInput.addEventListener("input", function () { 
+  const query = searchInput.value.trim();
+lessons.forEach(function(lessons) { 
+if (lessons.textContent.includes(query)) { lessons.style.display = "block"; }
+else {lessons.style.display = "none";}
+   });
+  });
+</script>
 </body>
 </html>
