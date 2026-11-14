@@ -18,27 +18,6 @@ cursor:pointer; }
  </style>
  </head>
  <body>
-    <h1 id="message">مرحبا بك</h1>
-    <button id="btn">اضغط هنا</button>
-    <button id="colorbtn">غير اللون </button>
-
-<script>
-const btn = document.getElementById("btn");
-const message = document.getElementById("message");
-btn.addEventListener("click", function () 
-{message.textContent="السلام عليكم ورحمة الله";});
-let isyellow = false;
-const colorbtn = document.getElementById("colorbtn");
-colorbtn.addEventListener("click",function(){
-if (isyellow === false){
-document.body.style.backgroundColor = "pink";
-isyellow = true;
-} else {
-document.body.style.backgroundColor = "lightblue";
-isyellow = false 
-  }
-});
-</script>
 <script>
 const searchInput = doucument.getElementByIdr("searchInput");
 const lessons = document.querySelectorAll(".lessons");
